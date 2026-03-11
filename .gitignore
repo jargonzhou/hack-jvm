@@ -24,3 +24,11 @@ hs_err_pid*
 replay_pid*
 
 Temp.java
+
+
+target
+.idea
+.gradle
+
+codes/kotlin.core-gradle/build
+codes/example-jmh/jmh-result.json
