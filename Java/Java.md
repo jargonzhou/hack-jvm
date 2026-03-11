@@ -1,6 +1,9 @@
 # Java
+* https://en.wikipedia.org/wiki/Java_(programming_language)
 
 # Language
+
+
 ## IO
 - Friesen, Jeff. **Java IO, NIO and NIO.2**. 2015. Apress.
   - Classic IO
@@ -106,3 +109,5 @@ System.out.println(Base64.getUrlEncoder()
 
 # See Also
 * [Awesome Java](https://github.com/akullpp/awesome-java): A curated list of awesome frameworks, libraries and software for the Java programming language.
+* [Java theory and practice: Dealing with InterruptedException](https://www.ibm.com/developerworks/java/library/j-jtp05236/index.html) - Brian Goetz.
+* [JDK Comparison](https://jdkcomparison.com/)

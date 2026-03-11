@@ -20,44 +20,11 @@ java -XX:+PrintFlagsFinal -version | findstr ThreadStackSize
 ```
 
 # GraalVM
-* https://github.com/oracle/graal
-
-> GraalVM is a high-performance JDK distribution that compiles your Java applications ahead of time into standalone binaries. These binaries start instantly, provide peak performance with no warmup, and use fewer resources. You can use GraalVM just like any other Java Development Kit in your IDE.
-
-JIT(Just-In-Time) compiler: GraalJIT
-
-AOT(Ahead-Of-Time) compiler
- 
-Native Image utility: compile applications AOT(Ahead-Of-Time) into native executables.
-
-The GraalVM Language Implementation Framework: Truffle
-- Java, Java on Truffle (Espresso)
-- Scala, Kotlin, ...
-- JavaScript, Node.js, Ruby, Python, ...
-- LLVM, WASM
-
-optimizations
-- partial escape analysis
-- partial loop unrolling
-- aggressive priority
-- polymorphic inlining
-- data flow analysis
-
-benchmarks
-- The Renaissance benchmark suite
-- The Scalabench test suite
-
-application frameworks
-- Helidon
-- Micronaut
-- Quarkus
-- Spring Boot
-- Tomcat
-
-GraalVM VS Code extension
-
-[Native Image](https://github.com/oracle/graal/blob/master/docs/reference-manual/native-image/README.md)
-- `org.graalvm.buildtools:native-maven-plugin`
-- `native-image`: ex `/c/Users/zhouj/.sdkman/candidates/java/17.0.9-graalce/native-image.cmd`
+see [GraalVM.md](./impls/GraalVM.md)
 
 # See Also
+* [JVM Anatomy Quarks](https://shipilev.net/jvm/anatomy-quarks/): "JVM Anatomy Quarks" is the on-going mini-post series, where every post is describing some elementary piece of knowledge about JVM. - Aleksey Shipilëv, JVM/Performance Geek.
+* [The Java Memory Model](https://www.cs.umd.edu/~pugh/java/memoryModel/): This web page is a starting point for discussions of and information concerning the Java Memory Model (Chapter 17 of the Java Language Specification). The Java Memory Model defines how threads interact through memory. It used to be somewhat unclear and unnecessarily limiting, and so was revised. This is a reference page for that revision. The official site for JSR 133 - The Java(tm) Memory Model and Thread Specification Revision - is [here](http://www.jcp.org/en/jsr/detail?id=133).
+* [The JSR-133 Cookbook for Compiler Writers](https://gee.cs.oswego.edu/dl/jmm/cookbook.html) by Doug Lea: This is an unofficial guide to implementing the new Java Memory Model (JMM) specified by JSR-133.
+* [Virtual Threads](https://docs.oracle.com/en/java/javase/21/core/virtual-threads.html)
+  * [JEP 444 Virtual Threads](https://openjdk.org/jeps/444)
