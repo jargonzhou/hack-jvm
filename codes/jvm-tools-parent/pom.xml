@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.spike.jvm</groupId>
+    <artifactId>jvm-tools-parent</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <developers>
+        <developer>
+            <id>jargonzhou</id>
+            <name>JiaGen Zhou</name>
+            <email>zhoujiagen@gmail.com</email>
+        </developer>
+    </developers>
+
+    <modules>
+        <module>example-asm</module>
+        <module>example-instrument</module>
+        <module>example-instrument/example-instrument-agent</module>
+        <module>example-instrument/example-instrument-application</module>
+        <module>example-javassist</module>
+        <module>example-bytebuddy</module>
+        <module>example-junit</module>
+        <module>jvm-tools-core</module>
+        <module>example-cglib</module>
+        <module>example-janino</module>
+        <module>example-jmh</module>
+        <module>example-antlr</module>
+        <module>example-javacc</module>
+    </modules>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.junit</groupId>
+                <artifactId>junit-bom</artifactId>
+                <!-- <version>6.0.2</version> -->
+                <version>5.14.2</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!-- bytes -->
+            <dependency>
+                <groupId>io.netty</groupId>
+                <artifactId>netty-buffer</artifactId>
+                <version>4.2.9.Final</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+        <!-- Tests -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <!--
+        https://docs.junit.org/5.14.2/running-tests/ide-support.html
+        https://docs.junit.org/6.0.2/running-tests/ide-support.html
+        -->
+        <!-- Need IDEA 2025.2.4
+        https://youtrack.jetbrains.com/projects/IDEA/issues/IDEA-380739/Re-run-failed-tests-fails-with-jupiter-6.0.0 -->
+        <dependency>
+            <groupId>org.junit.platform</groupId>
+            <artifactId>junit-platform-launcher</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.vintage</groupId>
+            <artifactId>junit-vintage-engine</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+            <version>3.27.6</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+</project>
